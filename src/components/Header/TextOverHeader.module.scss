@@ -1,3 +1,5 @@
+@import '../../styles/styles.scss';
+
 .container {
   width: 100%;
   height: 29px;
@@ -9,9 +11,7 @@
   .message {
     text-align: center;
     color: var(--color-txt-over-header);
-    font-size: 12px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    @include font_styles(12px, 500);
     line-height: 15px;
   }
 }

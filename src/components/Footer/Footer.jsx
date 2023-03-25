@@ -20,7 +20,6 @@ const PAY = "PAY";
 const V = "V";
 const VISA = "Visa";
 
-
 const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -33,15 +32,15 @@ const Footer = () => {
             <div className={styles.explore}>
               <h2>Explore</h2>
               <div className={styles.nav}>
-                <p>Electric Skateboards</p>
-                <p>Electric Scooters</p>
-                <p>Accessories</p>
-                <p>FAQs</p>
-                <p>Warranty</p>
-                <p>Quick Start Guide</p>
-                <p>Contact</p>
-                <p>Gift Card</p>
-                <p>Accessibility Statement</p>
+                <a href="#electric-skateboards">Electric Skateboards</a>
+                <a href="#electric-scooters">Electric Scooters</a>
+                <a href="#accessories">Accessories</a>
+                <a href="#faqs">FAQs</a>
+                <a href="#warranty">Warranty</a>
+                <a href="#quick-start">Quick Start Guide</a>
+                <a href="#contact">Contact</a>
+                <a href="#gift-card">Gift Card</a>
+                <a href="#accessibility-statement">Accessibility Statement</a>
               </div>
             </div>
             <div className={styles.aboutUs}>

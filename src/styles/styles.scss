@@ -1,0 +1,5 @@
+@mixin font_styles($size, $weight){
+    font-family: Roboto;
+    font-size: $size;
+    font-weight: $weight;
+}

@@ -1,6 +1,12 @@
+@import "../../../styles/styles.scss";
+
 .container {
   width: 186px;
   height: 238px;
+
+  &:hover{
+    cursor: pointer;
+  }
 
   img {
     width: 186px;
@@ -14,9 +20,7 @@
     align-items: center;
 
     .nameProduct {
-      font-family: Roboto;
-      font-size: 15px;
-      font-weight: 400;
+      @include font_styles(15px, 400);
       line-height: 18px;
       letter-spacing: 0em;
       text-align: center;
@@ -24,10 +28,8 @@
     }
 
     .price {
-        margin-top: 3px;
-      font-family: Roboto;
-      font-size: 14px;
-      font-weight: 400;
+      margin-top: 3px;
+      @include font_styles(14px, 400);
       line-height: 18px;
       letter-spacing: 0em;
       text-align: center;

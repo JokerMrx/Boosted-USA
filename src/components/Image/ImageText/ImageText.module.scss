@@ -1,0 +1,35 @@
+@import "../../../styles/styles.scss";
+
+.container {
+  width: 480px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    width: 460px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      @include font_styles(25px, 400);
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: var(--color-light-txt);
+    }
+
+    p {
+      margin-top: 15px;
+      @include font_styles(18px, 400);
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: var(--color-light-txt);
+    }
+  }
+}

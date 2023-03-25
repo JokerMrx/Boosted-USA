@@ -1,0 +1,37 @@
+@import "../../../styles/styles.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    width: 560px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      margin-top: 11.5px;
+      @include font_styles(25px, 400);
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+
+    .subtitle {
+      margin-top: 14px;
+      @include font_styles(18px, 400);
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+
+    .title,
+    .subtitle {
+      color: var(--color-light-txt);
+    }
+  }
+}

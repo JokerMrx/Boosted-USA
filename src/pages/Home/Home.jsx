@@ -2,103 +2,50 @@ import React from "react";
 import TextOverHeader from "../../components/Header/TextOverHeader";
 import Header from "../../components/Header/Header";
 import Btn from "../../components/Inputs/Button/Btn";
-import CardProduct from "../../components/Card/Product/CardProduct";
+import Image from "../../components/Image/Image/Image";
+import ImageText from "../../components/Image/ImageText/ImageText";
+import CardProduct from "../../components/Card/CardProduct/CardProduct";
 import Carousel from "../../components/Carousel/Carousel";
 import Footer from "../../components/Footer/Footer";
+
+import { Product } from "./data";
 
 import IconElectrek from "../../assets/Electrek.svg";
 import IconTechCrunch from "../../assets/TechCrunch.svg";
 import IconPopularMechanics from "../../assets/PopularMechanics.svg";
 import IconWired from "../../assets/Wired.svg";
 import IconLightning from "../../assets/Lightning.svg";
-//
+
+import Image1 from "../../assets/Image-1.png";
+import Image2 from "../../assets/Image-2.png";
+import Image5 from "../../assets/Image-5.png";
+import Image6 from "../../assets/Image-6.png";
+import Image7 from "../../assets/Image-7.png";
+
 import IconFast from "../../assets/Fast.svg";
 import IconFar from "../../assets/Far.svg";
 import IconSafe from "../../assets/Safe.svg";
 import IconBuildToLast from "../../assets/BuildToLast.svg";
-//
-import Product1 from "../../assets/Product-1.png";
-import Product2 from "../../assets/Product-2.png";
-import Product3 from "../../assets/Product-3.png";
-import Product4 from "../../assets/Product-4.png";
-import Product5 from "../../assets/Product-5.png";
-import Product6 from "../../assets/Product-6.png";
-import Product7 from "../../assets/Product-7.png";
+
+import IconProduct1 from "../../assets/Product-1.png";
+import IconProduct2 from "../../assets/Product-2.png";
+import IconProduct3 from "../../assets/Product-3.png";
+import IconProduct4 from "../../assets/Product-4.png";
+import IconProduct5 from "../../assets/Product-5.png";
+import IconProduct6 from "../../assets/Product-6.png";
+import IconProduct7 from "../../assets/Product-7.png";
 
 import styles from "./Home.module.scss";
 
-const products = [
-  {
-    image: Product1,
-    name: "Rev Tube",
-    price: "$16.00 $19.00",
-  },
-  {
-    image: Product2,
-    name: "Boosted Rev Stem Catch",
-    price: "$19.00 $29.00",
-  },
-  {
-    image: Product3,
-    name: "Stomp Brake Fender",
-    price: "Sold Out",
-  },
-  {
-    image: Product4,
-    name: "Boosted Belt Kit",
-    price: "$25.00",
-  },
-  {
-    image: Product5,
-    name: "Bearing Service Kit",
-    price: "$50.00",
-  },
-  {
-    image: Product6,
-    name: "Boosted Pulley / Belt Upgrade Kit",
-    price: "$75.00",
-  },
-  {
-    image: Product7,
-    name: "Boosted Skid Plates",
-    price: "$20.00",
-  },
-  {
-    image: Product7,
-    name: "Boosted Skid Plates",
-    price: "$20.00",
-  },
-  {
-    image: Product6,
-    name: "Boosted Pulley / Belt Upgrade Kit",
-    price: "$75.00",
-  },
-  {
-    image: Product5,
-    name: "Bearing Service Kit",
-    price: "$50.00",
-  },
-  {
-    image: Product4,
-    name: "Boosted Belt Kit",
-    price: "$25.00",
-  },
-  {
-    image: Product3,
-    name: "Stomp Brake Fender",
-    price: "Sold Out",
-  },
-  {
-    image: Product2,
-    name: "Boosted Rev Stem Catch",
-    price: "$19.00 $29.00",
-  },
-  {
-    image: Product1,
-    name: "Rev Tube",
-    price: "$16.00 $19.00",
-  },
-];
+const products = Product(
+  IconProduct1,
+  IconProduct2,
+  IconProduct3,
+  IconProduct4,
+  IconProduct5,
+  IconProduct6,
+  IconProduct7
+);
 
 const Home = () => {
   return (
@@ -114,8 +61,6 @@ const Home = () => {
           <div className={styles.buttons}>
             <Btn title={"BOOSTED REVS"} />
             <Btn title={"BOOSTED BOARDS"} />
-            {/* <button>BOOSTED REVS</button>
-            <button>BOOSTED BOARDS</button> */}
           </div>
         </div>
       </section>
@@ -145,20 +90,18 @@ const Home = () => {
         </p>
       </div>
       <div className={styles.images}>
-        <div>
-          <div>
-            <img src={IconLightning} alt={""} />
-            <p className={styles.title}>Shop Boosted Boards</p>
-            <p className={styles.stock}>In Stock</p>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={IconLightning} alt={""} />
-            <p className={styles.title}>Shop Boosted Revs</p>
-            <p className={styles.stock}>In Stock</p>
-          </div>
-        </div>
+        <Image
+          image={Image1}
+          icon={IconLightning}
+          title={"Shop Boosted Boards"}
+          subtitle={"In Stock"}
+        />
+        <Image
+          image={Image2}
+          icon={IconLightning}
+          title={"Shop Boosted Revs"}
+          subtitle={"In Stock"}
+        />
       </div>
       <section className={styles.electricSkateboards}>
         <div>
@@ -171,12 +114,11 @@ const Home = () => {
           <div>
             <Btn title={"Show Now"} />
           </div>
-          {/* <button>Shop Now</button> */}
         </div>
       </section>
       <div className={styles.boostedRev}>
-        <div className={styles.image1}></div>
-        <div className={styles.image2}></div>
+        <div className={styles.image1} />
+        <div className={styles.image2} />
         <div className={styles.content}>
           <h1>Boosted Rev</h1>
           <p>
@@ -189,24 +131,21 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.shop}>
-        <div className={`${styles.item} ${styles.image1}`}>
-          <div>
-            <h1>Shop Boosted Stealth</h1>
-            <p>IN STOCK</p>
-          </div>
-        </div>
-        <div className={`${styles.item} ${styles.image2}`}>
-          <div>
-            <h1>Shop Boosted Plus</h1>
-            <p>IN STOCK</p>
-          </div>
-        </div>
-        <div className={`${styles.item} ${styles.image3}`}>
-          <div>
-            <h1>Shop Boosted Mini</h1>
-            <p>IN STOCK</p>
-          </div>
-        </div>
+        <ImageText
+          image={Image5}
+          title={"Shop Boosted Stealth"}
+          subtitle={"IN STOCK"}
+        />
+        <ImageText
+          image={Image6}
+          title={"Shop Boosted Plus"}
+          subtitle={"IN STOCK"}
+        />
+        <ImageText
+          image={Image7}
+          title={"Shop Boosted Mini"}
+          subtitle={"IN STOCK"}
+        />
       </div>
       <div className={styles.videos}>
         <div className={styles.video}></div>
@@ -218,13 +157,9 @@ const Home = () => {
         <div className={styles.products}>
           <Carousel height="305px">
             <>
-              {products?.map(({image, name, price}, index) => (
+              {products?.map(({ image, name, price }, index) => (
                 <React.Fragment key={index}>
-                  <CardProduct
-                    image={image}
-                    nameProduct={name}
-                    price={price}
-                  />
+                  <CardProduct image={image} nameProduct={name} price={price} />
                 </React.Fragment>
               ))}
             </>

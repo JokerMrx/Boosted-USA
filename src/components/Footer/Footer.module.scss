@@ -1,8 +1,6 @@
+@import "../../styles/styles.scss";
+
 .footer {
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0; */
   max-width: var(--max-width-window);
   height: 399px;
   width: 100%;
@@ -34,10 +32,8 @@
           height: 229px;
           width: 379px;
           > h2 {
-            font-family: "Roboto";
+            @include font_styles(20px, 400);
             font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
             line-height: 30px;
             margin-bottom: 10px;
           }
@@ -47,12 +43,16 @@
             display: flex;
             flex-direction: column;
 
-            p {
-              font-family: "Roboto";
+            a {
+              @include font_styles(13px, 400);
               font-style: normal;
-              font-weight: 400;
-              font-size: 13px;
               line-height: 21px;
+              text-decoration: none;
+              color: var(--color-dart-text);
+
+              &:hover {
+                cursor: pointer;
+              }
             }
           }
         }
@@ -62,20 +62,16 @@
           width: 380px;
           height: 229px;
           > h2 {
-            font-family: "Roboto";
+            @include font_styles(19px, 400);
             font-style: normal;
-            font-weight: 400;
-            font-size: 19px;
             line-height: 30px;
             margin-bottom: 19px;
             margin-bottom: 12px;
           }
           p {
             width: max-content;
-            font-family: "Roboto";
+            @include font_styles(14px, 400);
             font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
             line-height: 21px;
           }
 
@@ -102,13 +98,11 @@
         align-items: center;
 
         .p {
-          font-family: Roboto;
-          font-weight: 400;
-          line-height: 19px;
+          @include font_styles(19px, 400);
           letter-spacing: 0em;
           text-align: left;
         }
-        
+
         .default {
           font-size: 13px;
         }
@@ -116,19 +110,27 @@
         .primary {
           font-size: 12px;
           color: #ff4a32;
+
+          &:hover{
+            cursor: pointer;
+          }
         }
       }
 
-      .methods{
+      .methods {
         margin: 20px 10px 0 68px;
         width: 332px;
         height: 30px;
         display: flex;
         gap: 4px;
 
-        img{
-            width: 38px;
-            height: 24px;
+        img {
+          width: 38px;
+          height: 24px;
+
+          &:hover{
+            cursor: pointer;
+          }
         }
       }
     }
