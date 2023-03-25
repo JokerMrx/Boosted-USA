@@ -1,6 +1,9 @@
+import React from "react";
 import TextOverHeader from "../../components/Header/TextOverHeader";
 import Header from "../../components/Header/Header";
 import Btn from "../../components/Inputs/Button/Btn";
+import CardProduct from "../../components/Card/Product/CardProduct";
+import Carousel from "../../components/Carousel/Carousel";
 import Footer from "../../components/Footer/Footer";
 
 import IconElectrek from "../../assets/Electrek.svg";
@@ -13,8 +16,89 @@ import IconFast from "../../assets/Fast.svg";
 import IconFar from "../../assets/Far.svg";
 import IconSafe from "../../assets/Safe.svg";
 import IconBuildToLast from "../../assets/BuildToLast.svg";
+//
+import Product1 from "../../assets/Product-1.png";
+import Product2 from "../../assets/Product-2.png";
+import Product3 from "../../assets/Product-3.png";
+import Product4 from "../../assets/Product-4.png";
+import Product5 from "../../assets/Product-5.png";
+import Product6 from "../../assets/Product-6.png";
+import Product7 from "../../assets/Product-7.png";
 
 import styles from "./Home.module.scss";
+
+const products = [
+  {
+    image: Product1,
+    name: "Rev Tube",
+    price: "$16.00 $19.00",
+  },
+  {
+    image: Product2,
+    name: "Boosted Rev Stem Catch",
+    price: "$19.00 $29.00",
+  },
+  {
+    image: Product3,
+    name: "Stomp Brake Fender",
+    price: "Sold Out",
+  },
+  {
+    image: Product4,
+    name: "Boosted Belt Kit",
+    price: "$25.00",
+  },
+  {
+    image: Product5,
+    name: "Bearing Service Kit",
+    price: "$50.00",
+  },
+  {
+    image: Product6,
+    name: "Boosted Pulley / Belt Upgrade Kit",
+    price: "$75.00",
+  },
+  {
+    image: Product7,
+    name: "Boosted Skid Plates",
+    price: "$20.00",
+  },
+  {
+    image: Product7,
+    name: "Boosted Skid Plates",
+    price: "$20.00",
+  },
+  {
+    image: Product6,
+    name: "Boosted Pulley / Belt Upgrade Kit",
+    price: "$75.00",
+  },
+  {
+    image: Product5,
+    name: "Bearing Service Kit",
+    price: "$50.00",
+  },
+  {
+    image: Product4,
+    name: "Boosted Belt Kit",
+    price: "$25.00",
+  },
+  {
+    image: Product3,
+    name: "Stomp Brake Fender",
+    price: "Sold Out",
+  },
+  {
+    image: Product2,
+    name: "Boosted Rev Stem Catch",
+    price: "$19.00 $29.00",
+  },
+  {
+    image: Product1,
+    name: "Rev Tube",
+    price: "$16.00 $19.00",
+  },
+];
 
 const Home = () => {
   return (
@@ -130,8 +214,22 @@ const Home = () => {
       </div>
       <div className={styles.accessories}>
         <h1>Looking for Accessories?</h1>
-        <div className={styles.line}></div>
-        <div className={styles.swiper}></div>
+        <div className={styles.line} />
+        <div className={styles.products}>
+          <Carousel height="305px">
+            <>
+              {products?.map(({image, name, price}, index) => (
+                <React.Fragment key={index}>
+                  <CardProduct
+                    image={image}
+                    nameProduct={name}
+                    price={price}
+                  />
+                </React.Fragment>
+              ))}
+            </>
+          </Carousel>
+        </div>
       </div>
       <div className={styles.advantages}>
         <div>
@@ -145,7 +243,7 @@ const Home = () => {
                 <br />
                 level experience.
               </p>
-            </div>{" "}
+            </div>
           </div>
           <div className={styles.item}>
             <img src={IconFar} alt={""} />

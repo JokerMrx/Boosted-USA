@@ -204,7 +204,7 @@
         color: var(--color-dark-txt);
       }
 
-      >div{
+      > div {
         margin-top: 20px;
       }
       /* button {
@@ -279,8 +279,8 @@
         background-color: var(--color-bg-button);
         color: var(--color-light-txt);
 
-        &:hover{
-            cursor: pointer;
+        &:hover {
+          cursor: pointer;
         }
       }
     }
@@ -381,15 +381,15 @@
     }
 
     .line {
-        margin-top: 22px;
+      margin-top: 22px;
       height: 2px;
       width: 70px;
       border-radius: 0px;
       background: #cfcfcf;
     }
 
-    .swiper {
-        margin-top: 42px;
+    .products {
+      margin-top: 42px;
       height: 305px;
       width: 100%;
     }

@@ -1,0 +1,47 @@
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .arrowLeft,
+  .arrowRight {
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background-color: rgba($color: #fff, $alpha: 0.75);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .arrowLeft {
+    left: 1%;
+  }
+
+  .arrowRight {
+    right: 1%;
+  }
+  .window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .pagesContainer {
+      height: 100%;
+      display: flex;
+      gap: 20px;
+      transition: translate;
+      transition-property: transform;
+      transition-duration: 300ms;
+      transition-timing-function: ease-in-out;
+    }
+  }
+}
