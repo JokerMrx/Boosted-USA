@@ -1,11 +1,12 @@
 @import "../../styles/styles.scss";
 
 .footer {
-  max-width: var(--max-width-window);
+  max-width: $big-desktop;
   height: 399px;
   width: 100%;
 
   .container {
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,24 +14,21 @@
     .firstPart {
       width: 100%;
       height: 329px;
-      background-color: var(--color-bg-footer);
+      background-color: $color-bg-footer;
 
       .content {
         max-width: 1200px;
         width: 100%;
         height: 289px;
-        margin: 20px 120px;
         display: flex;
+        justify-content: space-around;
+        align-items: center;
 
         .logo {
-          margin: 30px 0 10px 125px;
           width: 160px;
           height: 134px;
         }
         .explore {
-          margin: 30px 240px 50px;
-          height: 229px;
-          width: 379px;
           > h2 {
             @include font_styles(20px, 400);
             font-style: normal;
@@ -48,7 +46,7 @@
               font-style: normal;
               line-height: 21px;
               text-decoration: none;
-              color: var(--color-dart-text);
+              color: $color-dark-text;
 
               &:hover {
                 cursor: pointer;
@@ -58,9 +56,8 @@
         }
 
         .aboutUs {
-          margin: 30px 0 0 20px;
-          width: 380px;
-          height: 229px;
+          max-width: 350px;
+          width: 100%;
           > h2 {
             @include font_styles(19px, 400);
             font-style: normal;
@@ -70,6 +67,7 @@
           }
           p {
             width: max-content;
+            width: 100%;
             @include font_styles(14px, 400);
             font-style: normal;
             line-height: 21px;
@@ -88,11 +86,12 @@
       height: 70px;
       display: flex;
       justify-content: space-between;
-      background-color: var(--color-bg-footer-2);
+      background-color: $color-bg-footer-2;
 
       .info {
         margin: 20px 0 0 10px;
-        width: 730px;
+        max-width: 730px;
+        width: 100%;
         height: 30px;
         display: flex;
         align-items: center;
@@ -111,7 +110,7 @@
           font-size: 12px;
           color: #ff4a32;
 
-          &:hover{
+          &:hover {
             cursor: pointer;
           }
         }
@@ -119,7 +118,8 @@
 
       .methods {
         margin: 20px 10px 0 68px;
-        width: 332px;
+        max-width: 332px;
+        width: 100%;
         height: 30px;
         display: flex;
         gap: 4px;
@@ -128,9 +128,49 @@
           width: 38px;
           height: 24px;
 
-          &:hover{
+          &:hover {
             cursor: pointer;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $big-tablet) {
+  .footer {
+    .container {
+      .secondPart {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+
+        .info {
+          height: auto;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .methods{
+          margin: 30px 0;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $big-tablet) {
+  .footer {
+    .container {
+      .firstPart {
+        height: auto;
+        .content {
+          margin: 20px 0;
+          height: auto;
+          flex-direction: column;
+          gap: 25px;
         }
       }
     }

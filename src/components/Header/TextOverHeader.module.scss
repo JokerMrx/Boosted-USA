@@ -10,7 +10,7 @@
 
   .message {
     text-align: center;
-    color: var(--color-txt-over-header);
+    color: $color-text-over-header;
     @include font_styles(12px, 500);
     line-height: 15px;
   }

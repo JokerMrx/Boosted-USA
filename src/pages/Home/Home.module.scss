@@ -2,10 +2,10 @@
 
 .container {
   position: absolute;
-  top: 0;
+  top: 95px;
   left: 50%;
   transform: translateX(-50%);
-  max-width: var(--max-width-window);
+  max-width: $big-desktop;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -21,8 +21,9 @@
 
     .welcome {
       margin-top: 45px;
-      width: 635px;
+      max-width: 635px;
       height: 160px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -58,21 +59,27 @@
     .list {
       margin-top: 18px;
       max-width: 1200px;
+      width: 100%;
       height: 48px;
       display: flex;
       gap: 20px;
       padding: 0 10px;
 
       > div {
-        width: 280px;
+        max-width: 280px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
       }
     }
   }
 
   .question {
     margin-top: 30px;
-    width: 730px;
-    height: 183px;
+    max-width: 730px;
+    max-height: 183px;
+    width: 100%;
     > h1 {
       @include font_styles(32px, 400);
       line-height: 36px;
@@ -89,9 +96,12 @@
   }
 
   .images {
-    width: 1200px;
+    margin-top: 20px;
+    max-width: 1200px;
+    width: 100%;
     height: 580px;
     display: flex;
+    justify-content: center;
     gap: 20px;
   }
 
@@ -105,8 +115,9 @@
 
     > div {
       margin-top: 44px;
-      width: 564px;
+      max-width: 564px;
       height: 199px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -116,7 +127,7 @@
         line-height: 19px;
         letter-spacing: 1px;
         text-align: center;
-        color: var(--color-dark-txt);
+        color: $color-dark-text;
       }
 
       h1 {
@@ -125,7 +136,7 @@
         line-height: 51px;
         letter-spacing: 0em;
         text-align: center;
-        color: var(--color-dark-txt);
+        color: $color-dark-text;
       }
 
       > div {
@@ -134,16 +145,18 @@
     }
   }
   .boostedRev {
+    padding: 0 10px;
     margin-top: 44px;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     height: 380px;
     display: flex;
     gap: 20px;
 
     .image1,
     .image2 {
-      width: 380px;
-      height: 380px;
+      max-width: 380px;
+      max-height: 380px;
     }
 
     .image1 {
@@ -165,7 +178,7 @@
         line-height: 38px;
         letter-spacing: 0em;
         text-align: left;
-        color: var(--color-dark-txt);
+        color: $color-dark-text;
       }
 
       p {
@@ -174,7 +187,7 @@
         line-height: 23px;
         letter-spacing: 0em;
         text-align: left;
-        color: var(--color-dark-txt);
+        color: $color-dark-text;
       }
 
       button {
@@ -182,8 +195,8 @@
         height: 33px;
         width: 101px;
         border-radius: 35px;
-        background-color: var(--color-bg-button);
-        color: var(--color-light-txt);
+        background-color: $color-bg-button;
+        color: $color-light-text;
 
         &:hover {
           cursor: pointer;
@@ -202,14 +215,17 @@
   .videos {
     margin-top: 55px;
     padding: 0 10px;
-    width: 1160px;
+    max-width: 1160px;
+    width: 100%;
     height: 324px;
     display: flex;
+    justify-content: center;
     gap: 20px;
 
     .video {
-      width: 540px;
+      max-width: 540px;
       height: 304px;
+      width: 100%;
 
       &:first-child {
         background-image: url("../../assets/Image-8.png");
@@ -233,7 +249,7 @@
       line-height: 36px;
       letter-spacing: 0em;
       text-align: center;
-      color: var(--color-dark-txt);
+      color: $color-dark-text;
     }
 
     .line {
@@ -251,19 +267,22 @@
     }
   }
   .advantages {
+    padding: 0 10px;
     width: 100%;
     height: 308px;
     background-color: #000;
 
     > div {
       margin-top: 15px;
-      width: 1400px;
+      width: 100%;
       display: flex;
       gap: 20px;
 
       .item {
-        width: 330px;
-        height: 257.5px;
+        max-width: 330px;
+        max-height: 257.5px;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -273,7 +292,8 @@
         }
 
         .content {
-          width: 290px;
+          max-width: 290px;
+          width: 100%;
           height: max-content;
 
           h1 {
@@ -282,7 +302,7 @@
             line-height: 36px;
             letter-spacing: 0em;
             text-align: center;
-            color: var(--color-light-txt);
+            color: $color-light-text;
           }
 
           p {
@@ -291,9 +311,124 @@
             line-height: 23px;
             letter-spacing: 0em;
             text-align: center;
-            color: var(--color-light-txt);
+            color: $color-light-text;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $big-tablet) {
+  .container {
+    .images {
+      flex-direction: column;
+    }
+
+    .boostedRev {
+      height: auto;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      .content {
+        margin: 0;
+        max-width: 380px;
+        min-width: 380px;
+      }
+    }
+
+    .shop {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .videos {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .advantages {
+      height: 350px;
+
+      > div {
+        .item {
+          max-height: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .container {
+    .companies {
+      flex-wrap: wrap;
+    }
+
+    .question {
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $phone) {
+  .container {
+    .section {
+      .welcome {
+        height: auto;
+        .buttons {
+          height: auto;
+          flex-direction: column;
+          gap: 30px;
+        }
+      }
+    }
+
+    .companies {
+      padding: 20px 0;
+      height: auto;
+
+      .list {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+      }
+    }
+
+    .question {
+      padding: 10px;
+      max-width: 400px;
+      max-height: none;
+    }
+
+    .electricSkateboards {
+      > div {
+        h1 {
+          @include font_styles(36px, 700);
+        }
+        p {
+          padding: 10px;
+        }
+      }
+    }
+
+    .boostedRev {
+      .content {
+        min-width: auto;
+      }
+    }
+
+    .advantages {
+      padding: 0 0 20px;
+      height: auto;
+      > div {
+        flex-direction: column;
+        align-items: center;
       }
     }
   }

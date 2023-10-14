@@ -1,3 +1,17 @@
+$big-desktop: 1440px;
+$desktop: 1200px;
+$big-tablet: 992px;
+$tablet: 768px;
+$phone: 576px;
+
+$color-text-over-header: #fbfbfb;
+$color-light-text: #fff;
+$color-dark-text: #000;
+$color-bg-header: #fff;
+$color-bg-footer: #F7F7F7;
+$color-bg-footer-2: #fff;
+$color-bg-button: #FF4A32;
+
 @mixin font_styles($size, $weight){
     font-family: Roboto;
     font-size: $size;

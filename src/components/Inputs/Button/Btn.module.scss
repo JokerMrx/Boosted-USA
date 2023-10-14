@@ -3,12 +3,12 @@
 .btn {
   width: 201px;
   height: 33px;
-  background: var(--color-bg-button);
+  background: $color-bg-button;
   border-radius: 35px;
   @include font_styles(14px, 400);
   letter-spacing: 0em;
   text-align: center;
-  color: var(--color-light-txt);
+  color: $color-light-text;
 
   &:hover {
     cursor: pointer;

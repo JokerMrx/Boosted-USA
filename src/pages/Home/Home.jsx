@@ -1,6 +1,6 @@
 import React from "react";
-import TextOverHeader from "../../components/Header/TextOverHeader";
 import Header from "../../components/Header/Header";
+import Menu from "../../components/Menu/Menu";
 import Btn from "../../components/Inputs/Button/Btn";
 import Image from "../../components/Image/Image/Image";
 import ImageText from "../../components/Image/ImageText/ImageText";
@@ -49,171 +49,179 @@ const products = Product(
 
 const Home = () => {
   return (
-    <div className={styles.container}>
-      <TextOverHeader />
+    <>
       <Header />
-      <section className={styles.section}>
-        <div className={styles.welcome}>
-          <h1>Welcome to Boosted USA</h1>
+      <Menu />
+      <div className={styles.container}>
+        <section className={styles.section}>
+          <div className={styles.welcome}>
+            <h1>Welcome to Boosted USA</h1>
+            <p>
+              The Holy Grail of Electric Skateboards and One REVolutionary
+              Scooter
+            </p>
+            <div className={styles.buttons}>
+              <Btn title={"BOOSTED REVS"} />
+              <Btn title={"BOOSTED BOARDS"} />
+            </div>
+          </div>
+        </section>
+        <div className={styles.companies}>
+          <div className={styles.list}>
+            <div>
+              <img src={IconElectrek} alt={""} />
+            </div>
+            <div>
+              <img src={IconTechCrunch} alt={""} />
+            </div>
+            <div>
+              <img src={IconPopularMechanics} alt={""} />
+            </div>
+            <div>
+              <img src={IconWired} alt={""} />
+            </div>
+          </div>
+        </div>
+        <div className={styles.question}>
+          <h1>Looking for Boosted Boards, or Boosted Revs?</h1>
           <p>
-            The Holy Grail of Electric Skateboards and One REVolutionary Scooter
+            Boosted USA acquired all of the remaining inventory directly from
+            Boosted. This means we have the&nbsp; electric skateboards and
+            scooter you all love and have been looking for. Get your hands on
+            these&nbsp; highly sought after products while supplies last.
           </p>
-          <div className={styles.buttons}>
-            <Btn title={"BOOSTED REVS"} />
-            <Btn title={"BOOSTED BOARDS"} />
-          </div>
         </div>
-      </section>
-      <div className={styles.companies}>
-        <div className={styles.list}>
-          <div>
-            <img src={IconElectrek} alt={""} />
-          </div>
-          <div>
-            <img src={IconTechCrunch} alt={""} />
-          </div>
-          <div>
-            <img src={IconPopularMechanics} alt={""} />
-          </div>
-          <div>
-            <img src={IconWired} alt={""} />
-          </div>
+        <div className={styles.images}>
+          <Image
+            image={Image1}
+            icon={IconLightning}
+            title={"Shop Boosted Boards"}
+            subtitle={"In Stock"}
+          />
+          <Image
+            image={Image2}
+            icon={IconLightning}
+            title={"Shop Boosted Revs"}
+            subtitle={"In Stock"}
+          />
         </div>
-      </div>
-      <div className={styles.question}>
-        <h1>Looking for Boosted Boards, or Boosted Revs?</h1>
-        <p>
-          Boosted USA acquired all of the remaining inventory directly from
-          Boosted. This means we have the&nbsp; electric skateboards and scooter
-          you all love and have been looking for. Get your hands on these&nbsp;
-          highly sought after products while supplies last.
-        </p>
-      </div>
-      <div className={styles.images}>
-        <Image
-          image={Image1}
-          icon={IconLightning}
-          title={"Shop Boosted Boards"}
-          subtitle={"In Stock"}
-        />
-        <Image
-          image={Image2}
-          icon={IconLightning}
-          title={"Shop Boosted Revs"}
-          subtitle={"In Stock"}
-        />
-      </div>
-      <section className={styles.electricSkateboards}>
-        <div>
-          <p>High-performance</p>
-          <h1>Electric Skateboards</h1>
-          <p>
-            Cruising campus, going to work or getting through that long
-            list&nbsp; of errands has never been easier or more fun.
-          </p>
+        <section className={styles.electricSkateboards}>
           <div>
-            <Btn title={"Show Now"} />
-          </div>
-        </div>
-      </section>
-      <div className={styles.boostedRev}>
-        <div className={styles.image1} />
-        <div className={styles.image2} />
-        <div className={styles.content}>
-          <h1>Boosted Rev</h1>
-          <p>
-            There's never been an electric scooter quite like this. Speed past
-            traffic at 24 mph. Go up to 22 miles on a single charge. You'll get
-            there in no time at all. Stop and go with the roll of your thumb.
-            Its intuitive design means there’s almost no learning curve.
-          </p>
-          <button>Shop Now</button>
-        </div>
-      </div>
-      <div className={styles.shop}>
-        <ImageText
-          image={Image5}
-          title={"Shop Boosted Stealth"}
-          subtitle={"IN STOCK"}
-        />
-        <ImageText
-          image={Image6}
-          title={"Shop Boosted Plus"}
-          subtitle={"IN STOCK"}
-        />
-        <ImageText
-          image={Image7}
-          title={"Shop Boosted Mini"}
-          subtitle={"IN STOCK"}
-        />
-      </div>
-      <div className={styles.videos}>
-        <div className={styles.video}></div>
-        <div className={styles.video}></div>
-      </div>
-      <div className={styles.accessories}>
-        <h1>Looking for Accessories?</h1>
-        <div className={styles.line} />
-        <div className={styles.products}>
-          <Carousel height="305px">
-            <>
-              {products?.map(({ image, name, price }, index) => (
-                <React.Fragment key={index}>
-                  <CardProduct image={image} nameProduct={name} price={price} />
-                </React.Fragment>
-              ))}
-            </>
-          </Carousel>
-        </div>
-      </div>
-      <div className={styles.advantages}>
-        <div>
-          <div className={styles.item}>
-            <img src={IconFast} alt={""} />
-            <div className={styles.content}>
-              <h1>Go Fast</h1>
-              <p>
-                Boosted is known for its premium performance boards offering a
-                next-
-                <br />
-                level experience.
-              </p>
+            <p>High-performance</p>
+            <h1>Electric Skateboards</h1>
+            <p>
+              Cruising campus, going to work or getting through that long
+              list&nbsp; of errands has never been easier or more fun.
+            </p>
+            <div>
+              <Btn title={"Show Now"} />
             </div>
           </div>
-          <div className={styles.item}>
-            <img src={IconFar} alt={""} />
-            <div className={styles.content}>
-              <h1>Go Far</h1>
-              <p>
-                With optional extended battery life, you can get wherever you
-                need to go reliably.
-              </p>
-            </div>
+        </section>
+        <div className={styles.boostedRev}>
+          <div className={styles.image1} />
+          <div className={styles.image2} />
+          <div className={styles.content}>
+            <h1>Boosted Rev</h1>
+            <p>
+              There's never been an electric scooter quite like this. Speed past
+              traffic at 24 mph. Go up to 22 miles on a single charge. You'll
+              get there in no time at all. Stop and go with the roll of your
+              thumb. Its intuitive design means there’s almost no learning
+              curve.
+            </p>
+            <button>Shop Now</button>
           </div>
-          <div className={styles.item}>
-            <img src={IconSafe} alt={""} />
-            <div className={styles.content}>
-              <h1>Go Safe</h1>
-              <p>
-                Safety is a #1 priority for Boosted, always wear a helmet when
-                riding.
-              </p>
-            </div>
+        </div>
+        <div className={styles.shop}>
+          <ImageText
+            image={Image5}
+            title={"Shop Boosted Stealth"}
+            subtitle={"IN STOCK"}
+          />
+          <ImageText
+            image={Image6}
+            title={"Shop Boosted Plus"}
+            subtitle={"IN STOCK"}
+          />
+          <ImageText
+            image={Image7}
+            title={"Shop Boosted Mini"}
+            subtitle={"IN STOCK"}
+          />
+        </div>
+        <div className={styles.videos}>
+          <div className={styles.video}></div>
+          <div className={styles.video}></div>
+        </div>
+        <div className={styles.accessories}>
+          <h1>Looking for Accessories?</h1>
+          <div className={styles.line} />
+          <div className={styles.products}>
+            <Carousel height="305px">
+              <>
+                {products?.map(({ image, name, price }, index) => (
+                  <React.Fragment key={index}>
+                    <CardProduct
+                      image={image}
+                      nameProduct={name}
+                      price={price}
+                    />
+                  </React.Fragment>
+                ))}
+              </>
+            </Carousel>
           </div>
-          <div className={styles.item}>
-            <img src={IconBuildToLast} alt={""} />
-            <div className={styles.content}>
-              <h1>Build to Last!</h1>
-              <p>
-                Boosted products are engineered to last
-                <br /> for years and are extremely reliable.
-              </p>
+        </div>
+        <div className={styles.advantages}>
+          <div>
+            <div className={styles.item}>
+              <img src={IconFast} alt={""} />
+              <div className={styles.content}>
+                <h1>Go Fast</h1>
+                <p>
+                  Boosted is known for its premium performance boards offering a
+                  next-
+                  <br />
+                  level experience.
+                </p>
+              </div>
+            </div>
+            <div className={styles.item}>
+              <img src={IconFar} alt={""} />
+              <div className={styles.content}>
+                <h1>Go Far</h1>
+                <p>
+                  With optional extended battery life, you can get wherever you
+                  need to go reliably.
+                </p>
+              </div>
+            </div>
+            <div className={styles.item}>
+              <img src={IconSafe} alt={""} />
+              <div className={styles.content}>
+                <h1>Go Safe</h1>
+                <p>
+                  Safety is a #1 priority for Boosted, always wear a helmet when
+                  riding.
+                </p>
+              </div>
+            </div>
+            <div className={styles.item}>
+              <img src={IconBuildToLast} alt={""} />
+              <div className={styles.content}>
+                <h1>Build to Last!</h1>
+                <p>
+                  Boosted products are engineered to last
+                  <br /> for years and are extremely reliable.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

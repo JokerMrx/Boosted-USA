@@ -47,9 +47,9 @@ const Footer = () => {
               <h2>About Boosted USA</h2>
               <p className={styles.description}>
                 Boosted empowers people everywhere to commute across
-                <br /> their cities, campuses, and communities in ways that were
-                <br /> never before possible. Boosted is solving one of the
-                <br /> biggest problems people face each day: transportation.
+                their cities, campuses, and communities in ways that were
+                never before possible. Boosted is solving one of the
+                biggest problems people face each day: transportation.
               </p>
               <p>CaliRides LLC - DBA Boosted USA</p>
               <p>1281 Andersen Drive Ste. K</p>
